@@ -1,0 +1,336 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Users API &mdash; LineAPI 1.1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="LineAPI 1.1 documentation" href="../index.html"/>
+        <link rel="up" title="API Reference" href="index.html"/>
+        <link rel="next" title="News API" href="news.html"/>
+        <link rel="prev" title="API Reference" href="index.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> LineAPI
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../requirements.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../syntax.html">Syntax</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="">Users API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#api-users">api/users</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#api-users-x">api/users/x</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#api-users-x-name">api/users/x/name</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#api-users-x-rig">api/users/x/rig</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#api-users-x-clan">api/users/x/clan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#api-users-x-quote">api/users/x/quote</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#api-users-x-benchmarks">api/users/x/benchmarks</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="news.html">News API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="games.html">Games API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="servers.html">Servers API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tournaments.html">Tournaments API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting.html">Troubleshooting</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">LineAPI</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">API Reference</a> &raquo;</li>
+      
+    <li>Users API</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/reference/users.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="users-api">
+<h1>Users API<a class="headerlink" href="#users-api" title="Permalink to this headline">¶</a></h1>
+<p>This part of the LineAPI provides access to the user database of the Line-Lan event managment.
+You can acces Userdata like names, benchmarks, rigs etc.</p>
+<div class="section" id="api-users">
+<h2>api/users<a class="headerlink" href="#api-users" title="Permalink to this headline">¶</a></h2>
+<p>Gives back a list of all registered usernames.</p>
+<p>Example usage:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">file_get_contents</span><span class="p">(</span><span class="s">&#39;https://api.line-lan.net/api/users/&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Example Result:</p>
+<div class="highlight-python"><div class="highlight"><pre>user1
+user2
+user3
+user4
+user5
+
+etc.
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You can use /api/users/x/ if you want the username to a known userid you know instead of using line-numbers.</p>
+</div>
+</div>
+<div class="section" id="api-users-x">
+<h2>api/users/x<a class="headerlink" href="#api-users-x" title="Permalink to this headline">¶</a></h2>
+<p>Like /api/users/, but only gives back the name of the user with the userid specified as x.</p>
+<p>Example usage:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">file_get_contents</span><span class="p">(</span><span class="s">&#39;https://api.line-lan.net/api/users/15/&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Example Result:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">user15</span>
+</pre></div>
+</div>
+<p>with user15 corresponding to the name of the 15th registered user in the database.</p>
+</div>
+<div class="section" id="api-users-x-name">
+<h2>api/users/x/name<a class="headerlink" href="#api-users-x-name" title="Permalink to this headline">¶</a></h2>
+<p>Gives back the first and last name of a user.</p>
+<p>Example usage:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">file_get_contents</span><span class="p">(</span><span class="s">&#39;https://api.line-lan.net/api/users/5/name/&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Example Result:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">firstname</span>
+<span class="n">lastname</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="api-users-x-rig">
+<h2>api/users/x/rig<a class="headerlink" href="#api-users-x-rig" title="Permalink to this headline">¶</a></h2>
+<p>Gives back the details of the Computer <em>(aka. rig)</em> of the user with the userid x.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">A RAW-version of this command is available. See <a class="reference internal" href="../syntax.html"><em>Syntax Page</em></a> for details.</p>
+</div>
+<p>Example usage:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">file_get_contents</span><span class="p">(</span><span class="s">&#39;https://api.line-lan.net/api/users/1/rig/&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Example Result:</p>
+<div class="highlight-python"><div class="highlight"><pre>Intel Core-i5 3330 @3000 Mhz
+4 GB DDR3
+Intel HD Graphics 2500
+2000 GB
+</pre></div>
+</div>
+</div>
+<div class="section" id="api-users-x-clan">
+<h2>api/users/x/clan<a class="headerlink" href="#api-users-x-clan" title="Permalink to this headline">¶</a></h2>
+<p>Gives back the clan of a user.</p>
+<p>Example usage:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">file_get_contents</span><span class="p">(</span><span class="s">&#39;https://api.line-lan.net/api/users/5/clan/&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Example Result:</p>
+<div class="highlight-python"><div class="highlight"><pre>The Defenders
+</pre></div>
+</div>
+</div>
+<div class="section" id="api-users-x-quote">
+<h2>api/users/x/quote<a class="headerlink" href="#api-users-x-quote" title="Permalink to this headline">¶</a></h2>
+<p>Gives back the quote of a user.</p>
+<p>Example usage:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">file_get_contents</span><span class="p">(</span><span class="s">&#39;https://api.line-lan.net/api/users/3/quote/&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Example Result:</p>
+<div class="highlight-python"><div class="highlight"><pre>coffee is my water!
+</pre></div>
+</div>
+</div>
+<div class="section" id="api-users-x-benchmarks">
+<h2>api/users/x/benchmarks<a class="headerlink" href="#api-users-x-benchmarks" title="Permalink to this headline">¶</a></h2>
+<p>Gives back the benchmark results of a user.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">A RAW-version of this command is available. See <a class="reference internal" href="../syntax.html"><em>Syntax Page</em></a> for details.</p>
+</div>
+<p>Example usage:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">file_get_contents</span><span class="p">(</span><span class="s">&#39;https://api.line-lan.net/api/users/5/name/&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Example Result:</p>
+<div class="highlight-python"><div class="highlight"><pre>3DMark Cloud Gate 1234
+3DMark Fire Strike 4567
+3DMark Ice Storm 6789
+3DMark Sky Diver 4321
+PCMark 8 Home 9876
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="news.html" class="btn btn-neutral float-right" title="News API" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="API Reference" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

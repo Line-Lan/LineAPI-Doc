@@ -1,0 +1,331 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Tournaments API &mdash; LineAPI 1.1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="LineAPI 1.1 documentation" href="../index.html"/>
+        <link rel="up" title="API Reference" href="index.html"/>
+        <link rel="next" title="Troubleshooting" href="../troubleshooting.html"/>
+        <link rel="prev" title="Servers API" href="servers.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> LineAPI
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../requirements.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../syntax.html">Syntax</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="users.html">Users API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="news.html">News API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="games.html">Games API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="servers.html">Servers API</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Tournaments API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#api-tournaments">api/tournaments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#api-tournaments-x">api/tournaments/x</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#api-tournaments-x-type">api/tournaments/x/type</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#api-tournaments-x-game">api/tournaments/x/game</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#api-tournaments-x-teamcount">api/tournaments/x/teamcount</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#api-tournaments-x-teamsize">api/tournaments/x/teamsize</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#api-tournaments-x-notes">api/tournaments/x/notes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#api-tournaments-x-settings">api/tournaments/x/settings</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting.html">Troubleshooting</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">LineAPI</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">API Reference</a> &raquo;</li>
+      
+    <li>Tournaments API</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/reference/tournaments.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="tournaments-api">
+<h1>Tournaments API<a class="headerlink" href="#tournaments-api" title="Permalink to this headline">¶</a></h1>
+<p>This part of the LineAPI provides access to the tournaments of the Line-Lan eventpage</p>
+<div class="section" id="api-tournaments">
+<h2>api/tournaments<a class="headerlink" href="#api-tournaments" title="Permalink to this headline">¶</a></h2>
+<p>Gives back a list of all existing tournaments.</p>
+<p>Example usage:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">file_get_contents</span><span class="p">(</span><span class="s">&#39;https://api.line-lan.net/api/tournaments/&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Example Result:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">Turnier1</span>
+<span class="n">Turnier2</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="api-tournaments-x">
+<h2>api/tournaments/x<a class="headerlink" href="#api-tournaments-x" title="Permalink to this headline">¶</a></h2>
+<p>Gives back the name of the specified tournament</p>
+<p>Example usage:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">file_get_contents</span><span class="p">(</span><span class="s">&#39;https://api.line-lan.net/api/tournaments/2/&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Example Result:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">Turnier2</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="api-tournaments-x-type">
+<h2>api/tournaments/x/type<a class="headerlink" href="#api-tournaments-x-type" title="Permalink to this headline">¶</a></h2>
+<p>Gives back the type of the specified tournament</p>
+<p>Example usage:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">file_get_contents</span><span class="p">(</span><span class="s">&#39;https://api.line-lan.net/api/tournaments/1/type/&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Example Result:</p>
+<div class="highlight-python"><div class="highlight"><pre>single elimination
+</pre></div>
+</div>
+</div>
+<div class="section" id="api-tournaments-x-game">
+<h2>api/tournaments/x/game<a class="headerlink" href="#api-tournaments-x-game" title="Permalink to this headline">¶</a></h2>
+<p>Gives back the game of the specified tournament</p>
+<p>Example usage:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">file_get_contents</span><span class="p">(</span><span class="s">&#39;https://api.line-lan.net/api/tournaments/1/game/&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Example Result:</p>
+<div class="highlight-python"><div class="highlight"><pre>Counter-Strike: Source
+</pre></div>
+</div>
+</div>
+<div class="section" id="api-tournaments-x-teamcount">
+<h2>api/tournaments/x/teamcount<a class="headerlink" href="#api-tournaments-x-teamcount" title="Permalink to this headline">¶</a></h2>
+<p>Gives back the maximum number of teams of the specified tournament</p>
+<p>Example usage:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">file_get_contents</span><span class="p">(</span><span class="s">&#39;https://api.line-lan.net/api/tournaments/1/teamcount/&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Example Result:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="mi">16</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="api-tournaments-x-teamsize">
+<h2>api/tournaments/x/teamsize<a class="headerlink" href="#api-tournaments-x-teamsize" title="Permalink to this headline">¶</a></h2>
+<p>Gives back the teamsize of the specified tournament</p>
+<p>Example usage:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">file_get_contents</span><span class="p">(</span><span class="s">&#39;https://api.line-lan.net/api/tournaments/1/teamsize/&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Example Result:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="mi">5</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="api-tournaments-x-notes">
+<h2>api/tournaments/x/notes<a class="headerlink" href="#api-tournaments-x-notes" title="Permalink to this headline">¶</a></h2>
+<p>Gives back the notes and rules of the specified tournament</p>
+<p>Example usage:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">file_get_contents</span><span class="p">(</span><span class="s">&#39;https://api.line-lan.net/api/tournaments/1/notes/&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Example Result:</p>
+<div class="highlight-python"><div class="highlight"><pre>MR 30
+Round time 1:45
+bomb time 0:45
+no scripts allowed!
+...
+</pre></div>
+</div>
+</div>
+<div class="section" id="api-tournaments-x-settings">
+<h2>api/tournaments/x/settings<a class="headerlink" href="#api-tournaments-x-settings" title="Permalink to this headline">¶</a></h2>
+<p>Gives back the server settings of the specified tournament</p>
+<p>Example usage:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">file_get_contents</span><span class="p">(</span><span class="s">&#39;https://api.line-lan.net/api/tournaments/1/notes/&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Example Result:</p>
+<div class="highlight-python"><div class="highlight"><pre>sv_cheats 0
+sv_pure 1
+time_round 105
+time_defuse 45
+...
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../troubleshooting.html" class="btn btn-neutral float-right" title="Troubleshooting" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="servers.html" class="btn btn-neutral" title="Servers API" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
