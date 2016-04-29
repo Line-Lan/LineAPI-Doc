@@ -37,7 +37,7 @@ Example Result::
 api/games/x
 -----------
 
-Gives back a full list of all registered games.
+Gives back the name for the specified gameid.
 
 Example usage::
 

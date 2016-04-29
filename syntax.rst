@@ -51,7 +51,7 @@ To use this output effectively, you could type::
 
 	$splitted = explode(",",$result,10);
 
-This creates the Array $Splitted which contains all data, identified whíth indicies beginning with 0::
+This creates the Array $Splitted which contains all data, identified with indicies beginning with 0::
 
    0 => Intel
    1 => Core-i5 3330,
@@ -64,8 +64,8 @@ This creates the Array $Splitted which contains all data, identified whíth indi
 
 Now you can access the requested data via the array.
 
-Alternatives to PHP's explode() for other languages
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Extra: Alternatives to PHP's explode() for other languages
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Java::
 
@@ -73,21 +73,17 @@ Java::
 
 C/C++::
 
-  char *tok;
-  char *src = malloc(strlen(srcStr) + 1);
-  memcpy(src, srcStr);
+ std::vector<std::string> explode(std::string const & s, char delim) {
+    std::vector<std::string> result;
+    std::istringstream iss(s);
 
-  tok = strtok(src, ",");
-  if(tok == NULL) {
-  	printf("no tokens found");
-  	free(src);
-  	return ???;
+    for (std::string token; std::getline(iss, token, delim); )
+    {
+        result.push_back(std::move(token));
+    }
+
+    return result;
   }
-  printf("%s ; ", tok);
-  while((tok = strtok(NULL, ",")))
-  printf("%s ; ", tok);
-  printf("\n");
-  free(str);
 
 Python::
 

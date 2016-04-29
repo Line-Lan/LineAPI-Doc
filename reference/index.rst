@@ -10,3 +10,4 @@ API Reference
    games.rst
    servers.rst
    tournaments.rst
+   status.rst
