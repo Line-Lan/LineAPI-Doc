@@ -1,0 +1,231 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Troubleshooting &mdash; LineAPI 1.1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="LineAPI 1.1 documentation" href="index.html"/>
+        <link rel="prev" title="Syntax" href="syntax.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> LineAPI
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="requirements.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="syntax.html">Syntax</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#misspelled-requests">Misspelled Requests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#incombatible-get-method">Incombatible get method</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#scripts-with-json-only-input">Scripts with JSON-only input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#http-5xx-responses">HTTP 5xx-Responses</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">LineAPI</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Troubleshooting</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/troubleshooting.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="troubleshooting">
+<h1>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h1>
+<p>There are a lot of factors that can lead to a failiure of the request. The most common ones are listed below</p>
+<div class="section" id="misspelled-requests">
+<h2>Misspelled Requests<a class="headerlink" href="#misspelled-requests" title="Permalink to this headline">¶</a></h2>
+<p>Often you just make a mistake in spelling the Request URI correctly. Watch out for typing errors! This is the most common error.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">You can copy the URI in a web browser. If you get a response everything works fine on server side.</p>
+</div>
+</div>
+<div class="section" id="incombatible-get-method">
+<h2>Incombatible get method<a class="headerlink" href="#incombatible-get-method" title="Permalink to this headline">¶</a></h2>
+<p>As described in the <a class="reference internal" href="requirements.html"><span class="doc">Requirements</span></a>, you have to use a programming/scripting language that allows you to use GET requests on HTTP and HTTPS streams.</p>
+</div>
+<div class="section" id="scripts-with-json-only-input">
+<h2>Scripts with JSON-only input<a class="headerlink" href="#scripts-with-json-only-input" title="Permalink to this headline">¶</a></h2>
+<p>As you might have noticed, this API does <strong>not</strong> deliver its data in the JSON formats. There are many premade scripts/Frameworks that rely on a JSON-output, but imo a minimal response with just the requested data is easier to use, so we went with that</p>
+</div>
+<div class="section" id="http-5xx-responses">
+<h2>HTTP 5xx-Responses<a class="headerlink" href="#http-5xx-responses" title="Permalink to this headline">¶</a></h2>
+<p>If you get 500, 510, 522 etc. responses back from the server, check that the API-Server is available.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Visit <a class="reference external" href="https://status.line-lan.net">https://status.line-lan.net</a> for detailed information about uptime</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="syntax.html" class="btn btn-neutral" title="Syntax" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
