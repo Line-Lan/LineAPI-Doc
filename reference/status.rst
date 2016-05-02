@@ -23,8 +23,8 @@ Example Result::
   DNS: Online
   Ping: 15 ms
 
-api/games/x
------------
+api/status/x
+------------
 
 Gives back the status of the specified service.
 
