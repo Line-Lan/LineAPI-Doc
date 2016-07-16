@@ -9,11 +9,11 @@ api/games
 
 Gives back a full list of all registered games.
 
-Example usage::
+Example request::
 
-  file_get_contents('https://api.line-lan.net/api/games/')
+  https://api.line-lan.net/api/games/
 
-Example Result::
+Example result::
 
   Half-Life 
   Counter-Strike 1.6 
@@ -39,11 +39,11 @@ api/games/x
 
 Gives back the name for the specified gameid.
 
-Example usage::
+Example request::
 
-  file_get_contents('https://api.line-lan.net/api/games/7/')
+  https://api.line-lan.net/api/games/7/
 
-Example Result::
+Example result::
 
   Counter-Strike: Source 
 

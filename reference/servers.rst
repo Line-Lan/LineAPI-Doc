@@ -12,11 +12,11 @@ api/server
 
 Gives back a list of all registered servers.
 
-Example usage::
+Example request::
 
-  file_get_contents('https://api.line-lan.net/api/server/')
+  https://api.line-lan.net/api/server/
 
-Example Result::
+Example result::
 
   64.74.97.72:27017 Counter-Strike: Source
   91.211.116.28:27015 Counter-Strike 1.6
@@ -29,11 +29,11 @@ api/server/x
 
 Gives back the details of a specified server.
 
-Example usage::
+Example request::
 
-  file_get_contents('https://api.line-lan.net/api/server/2/')
+  https://api.line-lan.net/api/server/2/
 
-Example Result::
+Example result::
 
   91.211.116.28:27015,Counter-Strike 1.6
 

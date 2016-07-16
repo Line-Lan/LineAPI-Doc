@@ -10,9 +10,9 @@ api/users
 
 Gives back a list of all registered usernames.
 
-Example usage::
+Example request::
 
-  file_get_contents('https://api.line-lan.net/api/users/')
+  https://api.line-lan.net/api/users/
 
 Example Result::
 
@@ -32,9 +32,9 @@ api/users/x
 
 Like /api/users/, but only gives back the name of the user with the userid specified as x.
 
-Example usage::
+Example request::
 
-  file_get_contents('https://api.line-lan.net/api/users/15/')
+  https://api.line-lan.net/api/users/15/
 
 Example Result::
 
@@ -47,9 +47,9 @@ api/users/x/name
 
 Gives back the first and last name of a user.
 
-Example usage::
+Example request::
 
-  file_get_contents('https://api.line-lan.net/api/users/5/name/')
+  https://api.line-lan.net/api/users/5/name/
 
 Example Result::
 
@@ -64,9 +64,9 @@ Gives back the details of the Computer *(aka. rig)* of the user with the userid 
 .. note::
   A RAW-version of this command is available. See :doc:`Syntax Page </syntax>` for details.
 
-Example usage::
+Example request::
 
-  file_get_contents('https://api.line-lan.net/api/users/1/rig/')
+  https://api.line-lan.net/api/users/1/rig/
 
 Example Result::
 
@@ -80,9 +80,9 @@ api/users/x/clan
 
 Gives back the clan of a user.
 
-Example usage::
+Example request::
 
-  file_get_contents('https://api.line-lan.net/api/users/5/clan/')
+  https://api.line-lan.net/api/users/5/clan/
 
 Example Result::
 
@@ -93,9 +93,9 @@ api/users/x/quote
 
 Gives back the quote of a user.
 
-Example usage::
+Example request::
 
-  file_get_contents('https://api.line-lan.net/api/users/3/quote/')
+  https://api.line-lan.net/api/users/3/quote/
 
 Example Result::
 
@@ -108,9 +108,9 @@ Gives back the benchmark results of a user.
 .. note::
   A RAW-version of this command is available. See :doc:`Syntax Page </syntax>` for details.
 
-Example usage::
+Example request::
 
-  file_get_contents('https://api.line-lan.net/api/users/5/name/')
+  https://api.line-lan.net/api/users/5/name/
 
 Example Result::
 

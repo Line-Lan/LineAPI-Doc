@@ -10,11 +10,11 @@ api/tournaments
 
 Gives back a list of all existing tournaments.
 
-Example usage::
+Example request::
 
-  file_get_contents('https://api.line-lan.net/api/tournaments/')
+  https://api.line-lan.net/api/tournaments/
 
-Example Result::
+Example result::
 
   Turnier1
   Turnier2
@@ -25,11 +25,11 @@ api/tournaments/x
 
 Gives back the name of the specified tournament
 
-Example usage::
+Example request::
 
-  file_get_contents('https://api.line-lan.net/api/tournaments/2/')
+  https://api.line-lan.net/api/tournaments/2/
 
-Example Result::
+Example result::
 
   Turnier2
 
@@ -38,11 +38,11 @@ api/tournaments/x/type
 
 Gives back the type of the specified tournament
 
-Example usage::
+Example request::
 
-  file_get_contents('https://api.line-lan.net/api/tournaments/1/type/')
+  https://api.line-lan.net/api/tournaments/1/type/
 
-Example Result::
+Example result::
 
   single elimination
 
@@ -51,11 +51,11 @@ api/tournaments/x/game
 
 Gives back the game of the specified tournament
 
-Example usage::
+Example request::
 
-  file_get_contents('https://api.line-lan.net/api/tournaments/1/game/')
+  https://api.line-lan.net/api/tournaments/1/game/
 
-Example Result::
+Example result::
 
   Counter-Strike: Source
   
@@ -64,11 +64,11 @@ api/tournaments/x/teamcount
 
 Gives back the maximum number of teams of the specified tournament
 
-Example usage::
+Example request::
 
-  file_get_contents('https://api.line-lan.net/api/tournaments/1/teamcount/')
+  https://api.line-lan.net/api/tournaments/1/teamcount/
 
-Example Result::
+Example result::
 
   16
   
@@ -77,11 +77,11 @@ api/tournaments/x/teamsize
 
 Gives back the teamsize of the specified tournament
 
-Example usage::
+Example request::
 
-  file_get_contents('https://api.line-lan.net/api/tournaments/1/teamsize/')
+  https://api.line-lan.net/api/tournaments/1/teamsize/
 
-Example Result::
+Example result::
 
   5
 
@@ -90,11 +90,11 @@ api/tournaments/x/notes
 
 Gives back the notes and rules of the specified tournament
 
-Example usage::
+Example request::
 
-  file_get_contents('https://api.line-lan.net/api/tournaments/1/notes/')
+  https://api.line-lan.net/api/tournaments/1/notes/
 
-Example Result::
+Example result::
 
   MR 30
   Round time 1:45
@@ -107,11 +107,11 @@ api/tournaments/x/settings
 
 Gives back the server settings of the specified tournament
 
-Example usage::
+Example request::
 
-  file_get_contents('https://api.line-lan.net/api/tournaments/1/notes/')
+  https://api.line-lan.net/api/tournaments/1/notes/
 
-Example Result::
+Example result::
 
   sv_cheats 0
   sv_pure 1

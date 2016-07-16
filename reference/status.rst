@@ -9,11 +9,11 @@ api/status
 
 Gives back a full overview for the availability of all services.
 
-Example usage::
+Example request::
 
-  file_get_contents('https://api.line-lan.net/api/status/')
+  https://api.line-lan.net/api/status/
 
-Example Result::
+Example result::
 
   Website: Online
   Database: Online
@@ -28,11 +28,11 @@ api/status/x
 
 Gives back the status of the specified service.
 
-Example usage::
+Example request::
 
-  file_get_contents('https://api.line-lan.net/api/status/api/')
+  https://api.line-lan.net/api/status/api/
 
-Example Result::
+Example result::
 
   API: Online
 

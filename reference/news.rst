@@ -12,11 +12,11 @@ api/news
 
 Gives back a list of all published news articles.
 
-Example usage::
+Example request::
 
-  file_get_contents('https://api.line-lan.net/api/news/')
+  https://api.line-lan.net/api/news/
 
-Example Result::
+Example result::
 
  Line-Lan Eventmanagment
 
@@ -27,11 +27,11 @@ api/news/x
 
 Gives back a the news article with the specified newsid *(x)*.
 
-Example usage::
+Example request::
 
-  file_get_contents('https://api.line-lan.net/api/news/3/')
+  https://api.line-lan.net/api/news/3/
 
-Example Result::
+Example result::
 
   Test message
   
