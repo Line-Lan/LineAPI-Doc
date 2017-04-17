@@ -11,4 +11,5 @@ API Reference
    servers.rst
    tournaments.rst
    status.rst
+   status_old.rst
    blog.rst
