@@ -5,7 +5,7 @@ Status API (Old Version)
 .. warning::
   The LineAPI is deprecated and has been replaced by the API
   of the status page itself. The EOL for the old Status API is
-  the 1st June of 2017!
+  the 1st of June 2017!
 
 
 The Status API provides a overview of the current availability of miscellaneous Line-Lan services
