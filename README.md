@@ -1,4 +1,2 @@
-# LineAPI-Doc
-Documentation for the LineAPI
-
-Live version: https://api.line-lan.net/docs/
+# Deprecated
+The API is no longer in use
